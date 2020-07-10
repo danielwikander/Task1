@@ -6,9 +6,6 @@ import java.util.Random;
 public class TaskOne {
 
     public static void main(String[] args) {
-        int n = 0;
-        String filePath = null;
-
         // Print man page if requested in args.
         if (args.length > 0 && (args[0].equals("-h") || args[0].equals("-help") || args[0].equals("help"))) {
             printManPage();
@@ -23,6 +20,8 @@ public class TaskOne {
         }
 
         // Parse arguments, in order: n, filepath
+        int n = 0;
+        String filePath = null;
         try {
             n = Integer.parseInt(args[0]);
             filePath = args[1];
@@ -31,21 +30,28 @@ public class TaskOne {
             System.out.println("Execute 'TaskOne -h' for help.");
             return;
         }
-        try {
-            // Create/overwrite file
-            File numberFile = new File(filePath);
-            BufferedWriter writer = new BufferedWriter(new FileWriter(numberFile));
 
-            // Write random number to n lines in file
+        // Create/overwrite file
+        BufferedWriter writer = null;
+        try {
+            File numberFile = new File(filePath);
+            writer = new BufferedWriter(new FileWriter(numberFile));
+        } catch (Exception e) {
+            System.err.println("Could not create file: " + e.getMessage());
+            System.out.println("Execute 'TaskOne -h' for help.");
+            return;
+        }
+
+        // Write random number to n lines in file
+        try {
             Random rand = new Random();
             for(int i = 0; i < n; i++) {
                 writer.write(String.valueOf(rand.nextInt()));
                 writer.newLine();
             }
             writer.close();
-
         } catch (Exception e) {
-            System.err.println(e.getMessage());
+            System.err.println("Could not write numbers to file: " + e.getMessage());
             System.out.println("Execute 'TaskOne -h' for help.");
         }
     }

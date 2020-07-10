@@ -18,7 +18,7 @@ testFile now has 10 lines of random numbers.
 
 ### Manpage
 The following manpage can be accessed using the command
-`java TaskTwo -h`
+`java TaskOne -h`
 ```
 Synopsis 
     TaskOne [n] [filepath]

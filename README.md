@@ -3,8 +3,8 @@
 ### Installation
 ```
 git clone https://github.com/danielwikander/Task1
-cd Task1
-cd javac TaskOne.java
+cd Task1/src/
+javac TaskOne.java
 ```
 
 ### How to run

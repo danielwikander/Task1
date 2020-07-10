@@ -14,6 +14,8 @@ For example:
 
 `java TaskOne 10 testFile`
 
+testFile now has 10 lines of random numbers.
+
 ### Manpage
 ```
 Synopsis 

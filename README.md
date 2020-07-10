@@ -17,6 +17,8 @@ For example:
 testFile now has 10 lines of random numbers.
 
 ### Manpage
+The following manpage can be accessed using the command
+`java TaskTwo -h`
 ```
 Synopsis 
     TaskOne [n] [filepath]

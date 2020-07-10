@@ -1,11 +1,11 @@
 # TaskOne - Writes n lines of random numbers to a file.
 
 ### Installation
-`git clone https://github.com/danielwikander/Task1`
-
-`cd Task1`
-
-`cd javac TaskOne.java`
+```
+git clone https://github.com/danielwikander/Task1
+cd Task1/src/
+javac TaskOne.java
+```
 
 ### How to run
 `java TaskOne [ARGUMENT] [ARGUMENT]`
@@ -13,6 +13,8 @@
 For example:
 
 `java TaskOne 10 testFile`
+
+testFile now has 10 lines of random numbers.
 
 ### Manpage
 ```

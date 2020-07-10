@@ -19,7 +19,7 @@ testFile now has 10 lines of random numbers.
 ### Manpage
 ```
 Synopsis 
-    TaskOne [ARGUMENT] [ARGUMENT]
+    TaskOne [n] [filepath]
     
 Description
     Writes n lines of random numbers to file.
@@ -29,7 +29,7 @@ Description
 
 Arguments
     n:        The number of lines to write to the file. Must be an integer.
-    filePath: The path the the file to create/overwrite. Must be a valid filepath.
+    filepath: The path the the file to create/overwrite. Must be a valid filepath.
 
 Examples
     TaskOne 10 newFile
